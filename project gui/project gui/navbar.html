@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <!-- Bootstrap CSS -->
+</head>
+
+<body>
+    <section id="header_com">
+        <section id="header">
+            <div class="header_container">
+                <h1 class="h1-login" style="font-size: 34px;">Edu Proctor</h1>
+                <!-- <img src="../../icons/pen 1.png" class="s_img1" srcset=""> -->
+                <!-- Dropdown menu -->
+
+                <!-- <div class="dropdown" style="margin-bottom: 20px;" onclick="toggleDropdown()">
+                    <img src="../../Images/profile.png" alt="" class="s_img2">
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="selectItem('Profile')">Profile</a></li>
+                        <li><a href="#" onclick="selectItem('Settings')">Settings</a></li>
+                        <li><a href="#" onclick="selectItem('Logout')">Logout</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="dropdown" onclick="toggleDropdown()">
+                    <img src="../../Images/profile.png" alt="Profile Picture" class="s_img2 dropdown-trigger">
+                    <ul class="dropdown-menu">
+                        <li><a href="../../student_section/createProfile.html" class="dropdown-item" onclick="selectItem('Profile')">Profile</a></li>
+                        <li><a href="#" class="dropdown-item" onclick="selectItem('Settings')">Settings</a></li>
+                        <li><a href="#" class="dropdown-item" onclick="selectItem('Logout')">LogOut</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="header2">
+            <div class="header_container2">
+                <div class="inner_header">
+                    <img src="../../Images/profile.png" class="s_img1" alt="" srcset="">
+                    <span style="font-weight: bold;font-size: 20px;">PRANAV KOLHE</span>
+                </div>
+                <p style="font-weight: bold;font-size: 20px;">Registration No. 22320080</p>
+                <p style="font-weight: bold;font-size: 20px;">BTech-Computer Engineering</p>
+            </div>
+        </section>
+    </section>
+
+
+
+    <script>
+
+        // Wait for the DOM to be fully loaded before running the script
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Script loaded successfully!");
+            // Select the dropdown trigger element
+            var dropdownTrigger = document.querySelector(".dropdown-trigger");
+            var dropdownMenu = document.querySelector(".dropdown-menu");
+
+            // Function to handle item selection and menu removal
+            function selectItem(item) {
+                alert("Selected: " + item);
+                dropdownMenu.classList.remove("show"); // Hide the menu
+            }
+
+            // Function to toggle dropdown visibility
+            function toggleDropdown() {
+                dropdownMenu.classList.toggle("show"); // Toggle "show" class for visibility
+            }
+
+            // Attach click event to the trigger element
+            dropdownTrigger.addEventListener("click", toggleDropdown);
+        });
+
+    </script>
+
+</body>
+
+</html>
