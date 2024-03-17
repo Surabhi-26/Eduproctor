@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu Proctor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+ 
+    <!-- ----------navbar ------------  -->
+    <div id="navbar-placeholder"></div>
+    <script src="../navbar.js"></script>
+
+
+    <div class="container mt-5">
+        <div class="card student-info shadow-lg border-primary">
+          <div class="card-header bg-primary text-white text-center">
+            <h2>College Name</h2>
+            <h4>Student Information</h4>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div id="col_main" class="col-md-9 ">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <span class="fw-bold">First Name:</span> John
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Last Name:</span> Doe
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">PRN Number:</span> 1234567890
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Email Address:</span> johndoe@example.com
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Mobile Number:</span> +1234567890
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Date of Birth:</span> 2000-01-01
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Gender:</span> Male
+                  </li>
+                  <li class="list-group-item">
+                    <span class="fw-bold">Blood Group:</span> A+
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row mt-4 justify-content-center">
+              <button type="button" class="btn btn-success w-25 text-light mx-2 animate__animated animate__bounceIn" data-bs-toggle="modal" data-bs-target="#updateModal">Update Profile</button>
+              <button type="button" class="btn btn-secondary w-25 text-light mx-2 animate__animated animate__bounceIn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="updateModalLabel">Update Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save Changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

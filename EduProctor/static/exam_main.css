@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------------- Navbar -------------  */
+
+#header2{
+    /* border: 2px solid red; */
+    height: 45px;
+box-shadow: 0px 0px 5px rgba(68, 42, 42, 0.5); /* Add a box-shadow for elevation */
+    
+    
+
+}
+
+.header_container2{
+    display: flex;
+    /* justify-content: ce; */
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.header_container2 div{
+    display: flex;
+    /* border: 2px solid green; */
+    justify-content: center;
+    align-items: center;
+}
+
+.inner_header img{
+    width: 35px;
+    height: 35px;
+    margin-right: 19px;
+    margin-top: 3px;
+}
+
+.header_container2 p{
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/* -----------card --------  */
+
+.container {
+    padding: 50px;
+    height: 500px;
+    width: auto;
+}
+
+.card{
+      border: 10px solid red;
+    width: auto;
+  }
+  .exam-card {
+    border-radius: 10px;
+    border: 2px solid #007bff;
+    transition: all 0.3s ease-in-out;
+    width: auto;
+  }
+  
+  .exam-card:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .question-container {
+    line-height: 1.5;
+  }
+  
+  .answer-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .answer-option {
+    margin-bottom: 10px;
+  }
+  
+  .navigation {
+    display: none;
+  }
+  
+  .exam-card.active .navigation {
+    display: flex;
+  }
+  
+  .prev-btn, .next-btn {
+    width: auto;
+    padding: 8px 16px;
+  }
+  
+  /* Responsive Styles (adjust as needed) */
+  
+  @media (max-width: 768px) {
+    .col-md-8 {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ----------- video --------  */
+
+  #countdown {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+#video-container {
+    width: 50%;
+    max-width: 800px; 
+    margin: 0 auto;
+    /* border: 2px solid #ccc; */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 16%;
+}
+
+#video {
+    width: 50%;
+    display: block;
+}

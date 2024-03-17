@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        form {
+            display: flex;
+            flex-direction: row; /* Arrange items in a row */
+            align-items: center; /* Center vertically */
+        }
+
+        button[type="submit"] {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-left: 5px;
+        }
+        select{
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-left: 5px;
+
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/delete" method="post">
+            <select name="class">
+                {% for item in temp %}
+                    <option value="{{item}}">{{item}}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</body>
+</html>

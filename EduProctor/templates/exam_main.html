@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="exam_main.css">
+</head>
+
+<body>
+
+
+    <!-- -----------section navbar -------------------     -->
+
+
+    <section id="header2">
+        <div class="header_container2">
+            <div class="inner_header">
+                <img src="../../Images/profile.png" class="s_img1" alt="" srcset="">
+                <span style="font-weight: bold;font-size: 20px;">PRANAV KOLHE</span>
+            </div>
+            <p style="font-weight: bold;font-size: 20px;">Registration No. 22320080</p>
+            <p style="font-weight: bold;font-size: 20px;">BTech-Computer Engineering</p>
+        </div>
+    </section>
+    </section>
+
+
+
+    <div id="countdown" class=""
+        style="display: flex;justify-content: flex-end;margin-right: 30px;font-size: 30px;color: red;position: relative;top: 20px;right: 50px;margin-bottom: 0px;">
+
+
+
+    </div>
+
+    <div class="container mt-5  ">
+        <div class="row justify-content-center w-auto ">
+            <div class="col-md-8 w-auto">
+                <div class="card exam-card shadow-lg border-primary w-100">
+                    <div class="card-body w-auto">
+                        <h3 class="card-title text-center mb-4">Exam Title</h3>
+
+
+                        <div class="question-container w-100">
+
+
+                            <!-- -----------mcq based ----------  -->
+
+                            {% for item in values %}
+                            <div class="question-card active w-auto ">
+                                <p class="question">{{item.que}}</p>
+                                <ul class="answer-options">
+                                    <li class="answer-option">
+                                        <input type="radio" name="answer1" id="answer1_1">
+                                        <label for="answer1_1">{{item.op1}}</label>
+                                    </li>
+                                    <li class="answer-option">
+                                        <input type="radio" name="answer1" id="answer1_2">
+                                        <label for="answer1_2">{{item.op2}}</label>
+                                    </li>
+                                    <li class="answer-option">
+                                        <input type="radio" name="answer1" id="answer1_2">
+                                        <label for="answer1_2">{{item.op3}}</label>
+                                    </li>
+                                    <li class="answer-option">
+                                        <input type="radio" name="answer1" id="answer1_2">
+                                        <label for="answer1_2">{{item.op4}}</label>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            {%endfor%}
+
+
+
+
+
+
+                            <!-- ----------text based question -----------  -->
+
+                            <!-- <div class="question-card active w-auto" style="display: flex;justify-content: center;flex-direction: column; align-content: center;align-items: center;">
+                                <p class="question"><b>Question 1?:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero odio. Phasellus tempus tortor vel ligula aliquet, sed vulputate justo ultrices. Integer consectetur vehicula lectus, at rhoncus arcu scelerisque vel. Nam interdum lacus at augue sollicitudin, ut interdum metus fermentum. Sed quis bibendum sapien, et volutpat magna. In hac habitasse platea dictumst. Nullam feugiat justo a fermentum viverra. Aenean rhoncus nibh quis ex venenatis, sed fringilla arcu dictum. In hac habitasse platea dictumst. Nullam semper nunc in turpis ultrices venenatis. Donec tincidunt risus ut est venenatis, non feugiat dui tincidunt.</p>
+                                <div class="answer-options">
+                                    <textarea class="form-control answer-textarea" rows="4" placeholder="Type your answer here..." style="width: 650px;"></textarea>
+                                </div>
+                            </div> -->
+
+
+
+                            <!-- ----------interpreter ---------  -->
+                            <!-- <div class="question-card active w-100" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                                <p class="question"><b>Question 1?:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero odio. Phasellus tempus tortor vel ligula aliquet, sed vulputate justo ultrices. Integer consectetur vehicula lectus, at rhoncus arcu scelerisque vel. Nam interdum lacus at augue sollicitudin, ut interdum metus fermentum. Sed quis bibendum sapien, et volutpat magna. In hac habitasse platea dictumst. Nullam feugiat justo a fermentum viverra. Aenean rhoncus nibh quis ex venenatis, sed fringilla arcu dictum. In hac habitasse platea dictumst. Nullam semper nunc in turpis ultrices venenatis. Donec tincidunt risus ut est venenatis, non feugiat dui tincidunt.</p>
+                                <div class="answer-options">
+                                    <textarea class="form-control answer-textarea mb-3" rows="6" placeholder="Type your code here..." style="width: 650px;"></textarea>
+                                    <textarea class="form-control mb-3" rows="3" placeholder="Input from terminal..." style="width: 650px;"></textarea>
+                                    <button type="button" class="btn btn-success">Run Code</button>
+                                </div>
+                            </div>
+                             -->
+
+
+
+                            <!-- Repeat this structure for Questions 3 and 4 -->
+                        </div>
+                        <div class="navigation d-flex justify-content-between mt-4 "
+                            style="align-items: center;justify-content: center;align-content: center;">
+                            <a href=""><button type="button" class="btn btn-secondary prev-btn">Previous</button></a>
+                            <a href=""><button type="button" class="btn btn-primary next-btn">Next</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ------section camera -------------  -->
+
+
+
+
+
+    <div id="video-container">
+        <video id="video" autoplay></video>
+    </div>
+
+
+    <script>
+        // Get video element
+        const videoElement = document.getElementById('video');
+
+        // Function to start the camera and countdown
+        async function startCameraAndCountdown() {
+            try {
+                // Get access to the camera
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                // Attach the stream to the video element
+                videoElement.srcObject = stream;
+
+                // Start the countdown
+                startCountdown();
+            } catch (error) {
+                console.error('Error accessing the camera:', error);
+            }
+        }
+
+        // Start the camera and countdown when the page loads
+        startCameraAndCountdown();
+
+        // Function to start the countdown
+        function startCountdown() {
+            // Set the countdown date (e.g., 1 hour from now)
+            const countdownDate = new Date();
+            countdownDate.setMinutes(countdownDate.getMinutes() + 1);
+
+            // Update the countdown every second
+            const countdownElement = document.getElementById('countdown');
+            const countdownInterval = setInterval(updateCountdown, 1000);
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                // Calculate the remaining time
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the countdown in the format MM:SS
+                countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                // Display modal dialog boxes at specific times
+                if (minutes === 0 && seconds === 55) {
+                    window.alert('Unknown face detected or Face is covered');
+                }
+
+                if (minutes === 0 && seconds === 30) {
+                    window.alert('Movement Caught. Please look at the screen');
+                }
+
+                // If the countdown is over, redirect back to the previous page
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'examcompleted.html';
+                }
+            }
+        }
+
+
+    </script>
+
+    <script src="exam_main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Gq1NJgVtRYkQ0Ols7+aVGLxtT6wNiRVLi6AYT8NHJwbX3bznFtltTWRbI0q5djv3"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
