@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <style>
+        .classroom-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer; /* Change cursor to pointer on hover to indicate clickability */
+        }
+        .classroom-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .classroom-details {
+            color: #666;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <script src="../static/navbar.js"></script>
+    <h1>Teacher Dashboard</h1>
+    <h2>My Classrooms</h2>
+
+    {% for classroom in classrooms %}
+    <form action="/teacher-section" method="POST">
+        <div class="classroom-card" onclick="this.parentNode.submit();">
+            <input style="display: none;" type="text" name="classroom_code" value="{{ name }}">
+            <input style="display: none;" type="text" name="mail" value="{{ email }}">
+
+            <div class="classroom-name">{{ classroom }}</div>
+            <div class="classroom-details">Class Code: {{code}}</div>
+            <div class="classroom-details">Students: 25</div>
+            <div class="classroom-details">Assignments: 5</div>
+            <!-- Add more details as needed -->
+        </div>
+    </form>
+    {% endfor %}
+</body>
+</html>
