@@ -1,2 +1,0 @@
-Figure out to stop sound thread/ stream
-figure out dynamic "PER_SEC_UPDATE"
