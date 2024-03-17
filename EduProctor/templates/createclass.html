@@ -1,0 +1,92 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/createclass.css">
+    <title>Admin Panel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body">
+    <div id="navbar-placeholder"></div>
+
+    <script src="../static/navbar.js"></script>
+    <center>
+    <h1>Admin Panel</h1>
+    <form id="form" action="/createclass" method="POST">
+        <label for="classroom_name">Classroom Name:</label>
+        <input type="text" id="classroom_name" name="classroom_name" required>
+        <label for="class_code">Class code:</label>
+        <input type="text" id="classroom_name" name="classroom_code" required>
+        <label for="teacher_email">Teacher Email:</label>
+        <div id="inputFields">
+            <input class="email" type="email" id="teacher_email" name="teacher_email" required>
+
+        </div>
+        <button type="button" onclick="addInput()">Add Input</button>
+
+        <button type="button" onclick="getInputValues()">Add teachers</button>
+        <input id="finalstr" name="finalstr" style="display: none;" type="text" value="">
+        <input type="submit">
+
+    </form>
+    <h2>Classrooms</h2>
+    <ul>
+        {% for classroom in classrooms %}
+        <li>{{ classroom.name }} - Teacher: {{ classroom.teacher }}</li>
+        {% endfor %}
+    </ul>
+</center>
+
+
+    <script>
+        function addInput() {
+            // Create a new input element
+            var input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'email'; // Set the name attribute as needed
+
+            // Get the container div where inputs will be added
+            var container = document.getElementById('inputFields');
+
+            // Append the new input element to the container
+            container.appendChild(input);
+        }
+
+        function getInputValues() {
+            // Select all input elements with the class 'input-field'
+            var inputFields = document.getElementsByClassName('email');
+
+            // Initialize an empty array to store input values
+            var valuesArray = [];
+
+            // Iterate over each input field and push its value to the array
+            for (var i = 0; i < inputFields.length; i++) {
+                valuesArray.push(inputFields[i].value);
+            }
+
+            // Join the array elements into a single string separated by commas
+            var concatenatedValues = valuesArray.join(',');
+
+            document.getElementById('finalstr').value = concatenatedValues;
+
+          
+
+        }
+
+    </script>
+</body>
+
+</html>
